@@ -2,8 +2,9 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, View } from "react-native";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Component } from "./src/Component";
-import { queryClient } from "./src/queryClient";
+import { queryClient } from "./src/lib/queryClient";
 import { PostsList } from "./src/PostsList";
+import { CreatePost } from "./src/CreatePost";
 
 export default function App() {
   return (
@@ -11,6 +12,7 @@ export default function App() {
       <View style={styles.container}>
         <Component />
 
+        <CreatePost />
         <PostsList />
       </View>
       <StatusBar style="auto" />

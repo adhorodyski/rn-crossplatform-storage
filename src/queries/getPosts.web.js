@@ -1,3 +1,9 @@
-export const getPosts = () => {
-  return [{ id: 1, name: "web" }];
+import { keys, getMany } from "idb-keyval";
+
+export const getPosts = async () => {
+  const allKeys = await keys();
+  const postsKeys = allKeys.filter((key) => key.startsWith("posts_"));
+
+  const posts = await getMany(postsKeys);
+  return posts;
 };
