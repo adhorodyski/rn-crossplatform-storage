@@ -1,3 +1,3 @@
 export const getPosts = () => {
-  return [];
+  return [{ id: 1, name: "web" }];
 };
