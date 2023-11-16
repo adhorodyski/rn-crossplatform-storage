@@ -1,6 +1,6 @@
 import { FlatList, Text } from "react-native";
 import { useQuery } from "@tanstack/react-query";
-import { getPosts } from "./queries/getPosts";
+import { getPosts } from "./queries/posts";
 import { postsKeys } from "./lib/queryClient";
 
 export const PostsList = () => {

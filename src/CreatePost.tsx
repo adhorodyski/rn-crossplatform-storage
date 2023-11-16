@@ -1,6 +1,6 @@
 import { Pressable, Text } from "react-native";
 import { useMutation } from "@tanstack/react-query";
-import { createPost } from "./mutations/createPost";
+import { createPost } from "./mutations/posts";
 import { postsKeys, queryClient } from "./lib/queryClient";
 
 export const CreatePost = () => {
