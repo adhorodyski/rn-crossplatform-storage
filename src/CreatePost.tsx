@@ -5,7 +5,7 @@ import { postsKeys, queryClient } from "./lib/queryClient";
 
 export const CreatePost = () => {
   const createPostMutation = useMutation({
-    mutationKey: ["create-post"],
+    mutationKey: postsKeys.create,
     mutationFn: createPost,
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: postsKeys.all });

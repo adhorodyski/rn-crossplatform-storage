@@ -4,4 +4,5 @@ export const queryClient = new QueryClient();
 
 export const postsKeys = {
   all: ["posts"] as const,
+  create: ["create-post"] as const,
 };
