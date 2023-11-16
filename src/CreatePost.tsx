@@ -8,12 +8,12 @@ export const CreatePost = () => {
     mutationKey: ["create-post"],
     mutationFn: createPost,
     onSuccess: () => {
-      queryClient.invalidateQueries("posts");
+      queryClient.invalidateQueries({ queryKey: ["posts"] });
     },
   });
 
   return (
-    <Pressable onPress={createPostMutation.mutate}>
+    <Pressable onPress={() => createPostMutation.mutate()}>
       <Text>Create post</Text>
     </Pressable>
   );
