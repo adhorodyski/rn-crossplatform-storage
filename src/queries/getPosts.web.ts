@@ -1,4 +1,5 @@
 import { keys, getMany } from "idb-keyval";
+import type { Post } from "../lib/types";
 
 export const getPosts = async () => {
   const allKeys = await keys();
@@ -7,5 +8,5 @@ export const getPosts = async () => {
   );
 
   const posts = await getMany(postsKeys);
-  return posts;
+  return posts as Post[];
 };

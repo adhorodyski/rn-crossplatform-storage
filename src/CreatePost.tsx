@@ -13,7 +13,10 @@ export const CreatePost = () => {
   });
 
   return (
-    <Pressable onPress={() => createPostMutation.mutate()}>
+    <Pressable
+      onPress={() => createPostMutation.mutate()}
+      style={{ backgroundColor: "pink", padding: 10, borderRadius: 5 }}
+    >
       <Text>Create post</Text>
     </Pressable>
   );

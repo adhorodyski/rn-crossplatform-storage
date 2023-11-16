@@ -9,11 +9,15 @@ export default function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <View style={styles.container}>
-        <Text>Platform: {Platform.OS}</Text>
+        <Text style={styles.platform}>Platform: {Platform.OS}</Text>
 
-        <CreatePost />
+        <View style={styles.actionWrapper}>
+          <CreatePost />
+        </View>
+
         <PostsList />
       </View>
+
       <StatusBar style="auto" />
     </QueryClientProvider>
   );
@@ -25,5 +29,13 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+    padding: 32,
+  },
+  platform: {
+    marginBottom: 32,
+    fontWeight: "bold",
+  },
+  actionWrapper: {
+    marginBottom: 32,
   },
 });
