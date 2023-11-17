@@ -9,7 +9,10 @@ export default function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <SafeAreaView style={styles.container}>
-        <Text style={styles.platform}>Platform: {Platform.OS}</Text>
+        <Text style={styles.platform}>
+          Platform: {Platform.OS} (
+          {Platform.OS === "web" ? "IndexedDB" : "SQLite"})
+        </Text>
 
         <View style={styles.actionWrapper}>
           <CreatePost />
